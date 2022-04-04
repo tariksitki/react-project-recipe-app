@@ -1,0 +1,33 @@
+
+
+.navbar {
+    height: 15vh;
+    background-color: #89CFF0;
+    display: flex;
+    justify-content: space-between;
+    
+    .navbar-right { 
+        
+        width: 30%;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+
+    }
+
+    .navbar-left {
+        text-decoration: none;
+        font-size: 1.5rem;
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
