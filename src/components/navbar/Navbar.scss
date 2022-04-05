@@ -10,24 +10,42 @@
     
     .navbar-right { 
         width: 30%;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        
         
     }
 
     .navbar-left {
         text-decoration: none;
-        font-size: 1.5rem;
-        width: 15%;
+        font-size: 1.7rem;
+        font-weight: 600;
+        width: 12%;
+        height: 80%;
+        margin-left: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        border-bottom: 3px solid #0180bb;
+        border-radius: 12px;
     }
 }
 
 .nav-link {
     text-decoration: none;
     color: #0180bb;
+    padding: 1rem;
+}
+
+.link {
+    transition: all 400ms;
+    &:hover {
+        // background-color: #89CFF0;
+        // color: white;
+        border-radius: 10px;
+        transition: all 400ms;
+        border-bottom: 3px solid;
+    }
 }

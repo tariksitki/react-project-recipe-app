@@ -14,7 +14,7 @@ const Login = () => {
         </div>
 
         <div className="button-div">
-          <Link to= "/recipe" style={{textDecoration : "none"}} >
+          <Link to= "/" style={{textDecoration : "none"}} >
               <Buttons />
           </Link>
           

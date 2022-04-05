@@ -1,47 +1,65 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Meals from '../meals/Meals';
 import "./Main.scss";
 
 const Main = () => {
+  const [mealType, setMealType] = useState("");
+  const [mealName, setMealName] = useState();
+  const [data, setData] = useState([]);
+  const [search, setSearch] = useState(false);
+
+  const appID = "bb69260a";
+  const appKey = "d4cca3d279e3b8117f12aacef3c04159";
+  let baseUrl = `https://api.edamam.com/search?q=${mealName ? mealName : mealType}&app_id=${appID}&app_key=${appKey}&mealType=${mealType}`;
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    mealType ?   fetch(baseUrl)
+    .then(res => res.json())
+    .then(response => setData(response.hits)) : alert("Enter a Value");
+
+    mealType && setSearch(true);
+  }
+  
   return (
     <main className='main'>
-      <div className='container'> 
+      {search == false ? (
+      <div className='main-inner'>
+          <div className='container'>
           <section className='section-up'>
               <h1>SEARCH RECIPE</h1>
           </section>
 
-          
           <form action="" className='section-down'>
               <div className='div-mealtype'>
-                  <label for="mealtypes">Choose a Mealtype</label> <br />
-                  <input list="mealtype" name="browser" id="mealtypes"></input>
-                  <datalist id="mealtype">
-                    <option value="Edge"> </option>
-                    <option value="Firefox"> </option>
-                    <option value="Chrome"> </option>
-                    <option value="Opera"> </option>
-                    <option value="Safari"> </option>
-                  </datalist>
+
+                  <label htmlFor="mealtypes">Mealtype*</label> <br />
+                  <select name="mealtypes" id="mealtypes" onChange={(e) => setMealType(e.target.value) }>
+                      <option value="">Choose a Mealtype</option>
+                      <option value="Breakfast">Breakfast </option>
+                      <option value="Dinner">Dinner </option>
+                      <option value="Lunch">Lunch</option>
+                      <option value="Snack">Snack </option>
+                      <option value="Teatime">Teatime</option>
+                  </select>
               </div>
 
               <div className='div-mealname'>
-                  <label for="mealnames">Choose a Mealname</label> <br />
-                  <input list="mealname" name="browser" id="mealnames"></input>
-                  <datalist id="mealname">
-                    <option value="Edge"> </option>
-                    <option value="Firefox"> </option>
-                    <option value="Chrome"> </option>
-                    <option value="Opera"> </option>
-                    <option value="Safari"> </option>
-                  </datalist>
+                  <label htmlFor="mealnames">Keyword (Optional)</label> <br />
+                  <input type="text" id='mealnames' placeholder='Please Enter a Keyword' onChange={(e) => setMealName(e.target.value)} />
               </div>
 
               <div className='button-div'>
-                  <button className='button'>SEARCH</button>
+                  <button type='submit' className='button' onClick={handleSearch} >SEARCH</button>
               </div>
-          </form>
-          
+
+          </form> 
       </div>
+      </div> ) :  (<section> 
+        <Meals mealType={mealType} mealName={mealName} data={data}/>
+      </section>)}
     </main>
   )
 }
