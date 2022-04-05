@@ -1,0 +1,87 @@
+
+.main {
+    width: 100vw;
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+        width: 50%;
+        border-top: 3px solid #89CFF0;
+        border-bottom: 3px solid #89CFF0;
+        border-radius: 15px;
+
+        .section-up {
+            height: 20%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            border-bottom: 3px solid #89CFF0;
+            border-radius: 15px;
+        }
+
+        .section-down {
+            height: 80%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .div-mealtype,
+            .div-mealname,
+            .button-div {
+                width: 100%;
+                margin-bottom: 2rem;
+
+                #mealtypes, 
+                #mealnames {
+                    width: 100%;
+                    height: 3rem;
+                    margin-top: 1rem;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    box-shadow: 0 0 5px 1px #006a9b;
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                    font-size: 1.1rem;
+                    position: relative;
+                }
+            }
+
+            .button {
+                width: 11rem;
+                height: 2.5rem;
+                background-color: #039ae0;
+                border: none;
+                border-radius: 4px;
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: white;
+                cursor: pointer;
+                position: absolute;
+                transition: all 400ms;
+                &:hover {
+                    width: 11.5rem;
+                    height: 2.6rem;
+                    font-size: 1.2rem;
+                    transition: all 400ms;
+                    background-color: white;
+                    color: #039ae0;
+                    border: 2px solid #039ae0;
+                }
+            }
+
+        }
+    }
+}
+
