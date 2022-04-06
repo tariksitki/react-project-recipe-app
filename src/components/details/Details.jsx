@@ -18,6 +18,9 @@ const Details = () => {
             <tr>
               <th>NUTRIENS</th>
             </tr>
+            {meal.recipe.totalNutrients.map((item) => {
+              return console.log(item);
+            })}
           </table>
         </section>
 
