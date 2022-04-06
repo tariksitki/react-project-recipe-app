@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Meals from '../meals/Meals';
+import Meals from './Meals';
 import "./Main.scss";
 
 const Main = () => {
@@ -57,8 +57,9 @@ const Main = () => {
 
           </form> 
       </div>
+
       </div> ) :  (<section> 
-        <Meals mealType={mealType} mealName={mealName} data={data}/>
+        <Meals data={data}/>
       </section>)}
     </main>
   )
