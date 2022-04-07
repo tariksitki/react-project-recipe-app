@@ -2,7 +2,6 @@
 
 .details-main {
     width: 95%;
-    height: 100vh;
     // background-color: #89CFF0;
     margin: auto;
     display: flex;
@@ -12,6 +11,7 @@
     border-top: 5px solid #0296db;
     border-radius: 20px;
     background-color: #b0e0f6;
+    margin-bottom: 5rem;
 
     .header {
         display: flex;
@@ -39,14 +39,52 @@
 
     .details-main-down {
         display: flex;
+        justify-content: space-around;
         width: 80%;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        
 
         .main-down-left {
+            width: 40%;  
+            th {
+                font-size: 1.4rem;
+            }
+            .table-left-row {
+                border-collapse: collapse;
+                
+                td {
+                    padding: 1rem;
+                    border-bottom: 1px solid;
+                    border-collapse: collapse;
+                    border-radius: 5px;
+                    font-size: 1.2rem;
 
+                }
+                .quantity {
+                    text-align: center;
+                }
+                .unit {
+                    text-align: center;
+                }
+            }
         }
 
         .main-down-right {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            th {
+                font-size: 1.4rem;
+            }
+
+            .ingredient-td {
+                padding: 1rem;
+            }
 
         }
     }
 }
+
