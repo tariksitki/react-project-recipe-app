@@ -2,10 +2,8 @@
 
 .navbar {
     height: 11vh;
-    // background-color: #89CFF0;
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #89CFF0;
     color: #89CFF0;
     
     .navbar-right { 
@@ -41,7 +39,7 @@
     transition: all 400ms;
     &:hover {
         border-radius: 10px;
-        transition: all 400ms;
+        transition: all 300ms;
         border-bottom: 3px solid;
     }
 }

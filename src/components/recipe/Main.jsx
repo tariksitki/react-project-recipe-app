@@ -18,7 +18,7 @@ const Main = () => {
     e.preventDefault();
     mealType ?   fetch(baseUrl)
     .then(res => res.json())
-    .then(response => setData(response.hits)) : alert("Enter a Value");
+    .then(response => setData(response.hits)) : alert("Please Enter a Value for MealType");
 
     mealType && setSearch(true);
   }

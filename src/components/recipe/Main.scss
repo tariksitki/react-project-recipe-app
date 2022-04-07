@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     background-color: azure;
-
+    
     .main-inner {
         width: 100%;
         display: flex;
@@ -13,6 +13,8 @@
         align-items: center;
         height: 86vh;
         background-color: azure;
+        border-radius: 1.5rem;
+        border-top: 3px solid #03aefd;
 
         .container {
             display: flex;
@@ -20,8 +22,8 @@
             align-items: center;
             height: 80%;
             width: 50%;
-            border-top: 3px solid #89CFF0;
-            border-bottom: 3px solid #89CFF0;
+            border-top: 3px solid #03aefd;
+            border-bottom: 3px solid #03aefd;
             border-radius: 15px;
     
             .section-up {
@@ -31,7 +33,7 @@
                 justify-content: center;
                 align-items: center;
                 font-size: 1.5rem;
-                border-bottom: 3px solid #89CFF0;
+                border-bottom: 3px solid #03aefd;
                 border-radius: 15px;
             }
     
@@ -62,6 +64,7 @@
                         padding-left: 1rem;
                         font-size: 1.1rem;
                         position: relative;
+                        cursor: pointer;
                     }
                 }
     
@@ -77,8 +80,7 @@
                     cursor: pointer;
                     position: absolute;
                     transition: all 400ms;
-                    &:hover {
-                        
+                    &:hover {   
                         transition: all 400ms;
                         background-color: white;
                         color: #039ae0;

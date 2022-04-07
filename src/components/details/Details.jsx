@@ -4,7 +4,7 @@ import "./Details.scss";
 const Details = () => {
   const location = useLocation();
   const meal = location.state.meal;
-  console.log(meal.recipe);
+
   return (
     <main className="details-main">
       <header className="header">
@@ -16,7 +16,7 @@ const Details = () => {
         <section className="main-down-left">
           <table>
             <tbody>
-              <tr>
+              <tr >
                 <th colSpan={3} className="nutriens">
                   NUTRIENS
                 </th>

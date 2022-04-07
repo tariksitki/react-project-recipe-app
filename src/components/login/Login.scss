@@ -3,15 +3,23 @@
     width: 100vw;
     height: 88vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: azure;
+    align-items: center;
+    background-color: aliceblue;
+    border-top: 3px solid #0180bb;
+    border-radius: 1rem;
+
+    .header {
+        color: #006d9f;
+    }
     
     .login-container {
-        margin-top: 5rem;
+        margin-top: 3rem;
         width: 50%;
-        height: 60vh;
-        border-top: 3px solid #2dbcff;
-        border-bottom: 3px solid #2dbcff;
+        height: 58vh;
+        border-top: 3px solid #0180bb;
+        border-bottom: 3px solid #0180bb;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

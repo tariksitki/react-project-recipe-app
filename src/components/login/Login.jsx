@@ -6,16 +6,23 @@ import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
 
+  const handleLogin = () => {
+    navigate("/recipe");
+  }
+
   return (
     <div className="login-main">
+      <div className="header-div"> 
+          <h1 className="header">Welcome to Our Homepage</h1>
+      </div>
       <div className="login-container">
         <div className="inputs-div">
-          <Inputs/>
+          <Inputs handleLogin = {handleLogin} />
         </div>
 
         <div className="button-div">
-          <Link to= "/" style={{textDecoration : "none"}} >
-              <Buttons />
+          <Link to= "/recipe" style={{textDecoration : "none"}} >
+              <Buttons onClick = {handleLogin} />
           </Link>
           
         </div>
